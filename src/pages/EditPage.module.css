@@ -1,0 +1,200 @@
+.editPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.goBackButtonContainer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.goBackButton {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+.goBackButton:hover {
+  color: #007bff;
+}
+
+.profileContainer {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.profileSidebar {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileImage {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.profileOptions {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+}
+
+.profileOptions p {
+  margin: 15px 0;
+  color: #444;
+  cursor: pointer;
+}
+
+.profileOptions p:hover {
+  color: black;
+}
+
+.profileForm {
+  flex: 2;
+  padding: 40px;
+  margin-left: 50px;
+}
+
+.formTitle {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+label {
+  /* input label */
+
+  width: 420px;
+  height: 25px;
+
+  /* Desktop/Text 1 Semibold */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  /* 01 */
+  color: #161616;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+
+}
+
+input {
+  /* input field */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 8px 0px 16px;
+  gap: 8px;
+
+  /* 04 */
+  border: 2px solid #DADADA;
+  border-radius: 50px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+
+  width: 60%;
+  padding: 12px;
+
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.saveButton {
+  /* State=Default, Size=Desktop */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 42px;
+  gap: 12px;
+
+  width: 136px;
+  height: 46px;
+  left: 20px;
+  top: 20px;
+
+  /* 01 */
+  background: #161616;
+  border-radius: 50px;
+
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.86px;
+  text-align: center;
+
+  color: #FDFDFD;
+
+
+}
+
+.saveButton:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+
+  .profileForm {
+    margin-left: 0;
+  }
+
+  .profileSidebar {
+    margin-bottom: 20px;
+    border-right: none;
+  }
+}

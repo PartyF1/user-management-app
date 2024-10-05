@@ -1,0 +1,95 @@
+.userCard {
+    width: 360px; /* Фиксированная ширина */
+    height: 168px; /* Фиксированная высота */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Для правильного позиционирования дропдауна */
+  }
+  
+  .avatarContainer {
+    flex-shrink: 0;
+  }
+  
+  .avatar {
+    width: 112px;
+    height: 120px;
+    border-radius: 8px; /* Круглая аватарка */
+    object-fit: cover;
+  }
+  
+  .userInfo {
+    flex-grow: 1;
+    margin-left: 16px;
+  }
+  
+  .username {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    color: #007bff; /* Цвет ссылки */
+  }
+  
+  .username:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+  }
+  
+  .status {
+    font-size: 14px;
+    color: #757575; /* Серый цвет для статуса */
+    margin: 4px 0 0;
+  }
+  
+  .location {
+    font-size: 12px;
+    color: #bdbdbd; /* Светло-серый цвет для местоположения */
+    margin: 4px 0 0;
+  }
+  
+  .options {
+    display: flex;
+    align-items: center;
+    position: relative; /* Для правильного позиционирования дропдауна */
+  }
+  
+  .menuIcon {
+    cursor: pointer;
+    font-size: 24px; /* Размер иконки меню */
+  }
+  
+  .dropdown {
+    overflow: hidden;
+    position: absolute; /* Позиционирование дропдауна */
+    right: 0;
+    top: 100%; /* Появление под иконкой */
+    background-color: white; /* Цвет фона дропдауна */
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Дропдаун выше остальных элементов */
+  }
+  
+  .dropdownButton {
+    color: #000;
+    display: block;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent; /* Прозрачный фон */
+    width: 100%; /* Полная ширина кнопки */
+    text-align: left; /* Выравнивание текста слева */
+    text-decoration: none;
+  }
+  
+  .dropdownButton:hover {
+    background-color: #f0f0f0; /* Цвет кнопки при наведении */
+  }
+  

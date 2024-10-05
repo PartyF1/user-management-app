@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+User Management App
+Описание
+Это двухстраничное приложение на React для управления пользователями, загружаемыми с сервера. Оно использует Redux Toolkit для управления состоянием и API взаимодействий. Приложение позволяет:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Просматривать список пользователей
+Редактировать информацию о пользователях
+Архивировать/разархивировать и скрывать пользователей
+Обеспечено рендерингом через React Router для работы с несколькими страницами
+Выполнено с полной стилизацией с использованием CSS-модулей
+Основные функции
+Главная страница:
 
-## Available Scripts
+Отображает список активных пользователей (первые 6 из API).
+Предусмотрена возможность:
+Редактирования пользователя (переход на страницу изменения данных).
+Архивирования пользователя (перенос в секцию "Архив").
+Скрытия пользователя (убирает карточку из списка активных).
+Отображение карточек из секции "Архив" с возможностью разархивирования.
+Во время загрузки данных отображается Loader.
+Страница редактирования:
 
-In the project directory, you can run:
+Содержит поля для изменения:
+Имени
+Имени пользователя (username)
+Email
+Город (City)
+Телефона
+Компании
+Обеспечена валидация полей (они не могут быть пустыми).
+При успешном сохранении отображается попап с подтверждением.
+Используемые технологии
+React - Библиотека для создания пользовательских интерфейсов.
+TypeScript - Строгая типизация JavaScript для повышения надежности кода.
+Redux Toolkit - Упрощенное управление состоянием приложения и работа с API через createApi.
+React Router v6 - Для маршрутизации страниц.
+CSS Modules - Локальные стили для компонентов.
+RTK Query - Для выполнения запросов к API.
+Установка и запуск проекта
+Клонируйте репозиторий:
 
-### `npm start`
+bash
+Копировать код
+git clone https://github.com/ваш_репозиторий/user-management-app.git
+Перейдите в директорию проекта:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+bash
+Копировать код
+cd user-management-app
+Установите зависимости:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+bash
+Копировать код
+npm install
+Запустите проект:
 
-### `npm test`
+bash
+Копировать код
+npm start
+Приложение будет доступно по адресу: http://localhost:3000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Структура проекта
+bash
+Копировать код
+src/
+├── assets/          # Статические файлы (например, логотипы, картинки)
+├── components/      # Компоненты React (UserCard, Loader и т.д.)
+├── pages/           # Страницы приложения (HomePage, EditUserPage)
+├── redux/           # Redux Toolkit API и Slice для управления пользователями
+├── styles/          # Глобальные стили и модули стилей для компонентов
+└── App.tsx          # Главный файл приложения
+Основные папки:
+components — Содержит отдельные компоненты, такие как карточки пользователей, лоадеры и т.д.
+pages — Содержит страницы для маршрутизации: главная страница и страница редактирования пользователя.
+redux — Redux Toolkit setup с createSlice и createApi для запросов к API и управления состоянием пользователей.
+API
+Данные пользователей загружаются с открытого API:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Base URL: https://jsonplaceholder.typicode.com
+Endpoint: /users
+Скрипты
+npm start — Запуск приложения в режиме разработки.
+npm run build — Создание оптимизированной сборки для продакшена.
+npm test — Запуск тестов.
