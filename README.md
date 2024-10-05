@@ -39,15 +39,4 @@
 - **CSS Modules** - Локальные стили для компонентов.
 - **RTK Query** - Для выполнения запросов к API.
 
-## Установка и запуск проекта
-
-1. Клонируйте репозиторий:
-  ```bash
-  git clone https://github.com/partyf1/user-management-app.git
-  ```bash
-  cd user-management-app
-  ```bash
-  npm install
-  ```bash
-  npm start
 
