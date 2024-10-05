@@ -43,4 +43,9 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/ваш_репозиторий/user-management-app.git
+   git clone https://github.com/partyf1/user-management-app.git
+   cd user-management-app
+    npm install
+    npm start
+
+
